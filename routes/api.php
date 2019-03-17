@@ -16,5 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::Apiresource("user", 'User\UserApiController');
-Route::post("user/login", 'User\UserApiController@userlogin');
+Route::model('user', 'User');
+Route::Apiresource("userApi", 'User\UserApiController');
+Route::post("user/login", 'User\UserApiController@getSubalerns');
+Route::post("user/subalert", 'User\UserApiController@getInfoUser');
