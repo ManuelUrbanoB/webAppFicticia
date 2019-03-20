@@ -18,5 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::model('user', 'User');
 Route::Apiresource("userApi", 'User\UserApiController');
-Route::post("user/login", 'User\UserApiController@getSubalerns');
-Route::post("user/subalert", 'User\UserApiController@getInfoUser');
+Route::post("user/login", 'User\UserApiController@userlogin');
+Route::post("user/subalert", 'User\UserApiController@getSubalerns');
+Route::post("user/infouser", 'User\UserApiController@getInfoUser');
