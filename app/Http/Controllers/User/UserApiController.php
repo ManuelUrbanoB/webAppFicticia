@@ -1,9 +1,8 @@
 <?php
 namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Response;
-use App\User;
-use DB;
+use App\Models\User;
+
 class UserApiController extends Controller{
 
     /**
@@ -115,7 +114,7 @@ class UserApiController extends Controller{
      * @method Funcion que me deuelve la información de un usuario especifico
      * 
     */
-    public function getInfoUser(){
+    public function listUser(){
 
     }
 
